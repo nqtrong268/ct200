@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="seq_changer_request_order" model="ir.sequence">
+            <field name="name">Change Request Order</field>
+            <field name="code">change.request.order</field>
+            <field name="prefix">CT</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <record id="seq_product" model="ir.sequence">
+            <field name="name">Product</field>
+            <field name="code">product.order</field>
+            <field name="prefix">PRD</field>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

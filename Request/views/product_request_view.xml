@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_action" model="ir.actions.act_window">
+            <field name="name">Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="product_change_root" name="Product" sequence="2"/>
+        <menuitem id="product_change_child" name="Product" parent="product_change_root" action="product_action" sequence="1"/>
+    </data>
+</odoo>

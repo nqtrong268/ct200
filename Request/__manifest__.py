@@ -14,7 +14,10 @@
         'base'
     ],
     'data': [
+        'data/ir_sequence_data.xml',
+
         'views/form_request_view.xml',
+        'views/product_request_view.xml',
     ],
     'author': 'Nguyen Quang Trong',
     'installable': True,

@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-
+        <record id="form_request_tree_view" model="ir.ui.view">
+            <field name="name">Form request tree</field>
+            <field name="model">form_request</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="seq_form_request"/>
+                    <field name="create_date"/>
+                    <field name="create_uid" />
+                    <field name="des_change"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="form_request_form_view" model="ir.ui.view">
+            <field name="name">Form Request</field>
+            <field name="model">form_request</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="seq_form_request"/>
+                                <field name="date_request"/>
+                            </group>
+                            <group>
+                                <field name="reason_change"/>
+                                <field name="des_change"/>
+                                <field name="before_change"/>
+                                <field name="after_change"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <record id="request_action" model="ir.actions.act_window">
             <field name="name">Form request</field>
             <field name="type">ir.actions.act_window</field>
@@ -11,7 +45,7 @@
         <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
         <menuitem id="form_request_root" name="Form Request" sequence="1"/>
         <!-- This Menu Item Must have a parent -->
-        <menuitem id="form_request_child" name="Form Request" parent="form_request_root" sequence="1"/>
+        <menuitem id="form_request_child" name="Form Request" parent="form_request_root" action="request_action" sequence="1"/>
 
     </data>
 </odoo>

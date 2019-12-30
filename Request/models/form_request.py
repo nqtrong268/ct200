@@ -11,3 +11,12 @@ class Form_request(models.Model):
     des_change = fields.Text(string='Mô tả thay đổi')
     before_change = fields.Text(string='Trước thay đổi')
     after_change = fields.Text(string='Sau thay đổi')
+    seq_form_request = fields.Char(string='Number', require=True, readonly=True, copy=False,
+                                   default=lambda self: ('New'))
+
+    @api.model
+    def create(self, vals):
+        if vals.get('seq_form_request', ('New')) == ('New'):
+            vals['seq_form_request'] = self.env['ir.sequence'].next_by_code('change.request.order') or ('New')
+        result = super(Form_request, self).create(vals)
+        return result
