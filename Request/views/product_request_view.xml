@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <record id="product_tree_view" model="ir.ui.view">
+            <field name="name">Product</field>
+            <field name="model">product.request</field>
+            <field name="arch" type="xml">
+                <tree string="Product">
+                    <field name="name_seq"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="product_form_view" model="ir.ui.view">
+            <field name="name">Product</field>
+            <field name="model">product.request</field>
+            <field name="arch" type="xml">
+                <form string="Product">
+                    <sheet>
+                        <group>
+                            <field name="name_seq"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
         <record id="product_action" model="ir.actions.act_window">
             <field name="name">Product</field>
