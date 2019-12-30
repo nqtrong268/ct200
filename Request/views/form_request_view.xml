@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="request_action" model="ir.actions.act_window">
+            <field name="name">Form request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">form_request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="form_request_root" name="Form Request" sequence="1"/>
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="form_request_child" name="Form Request" parent="form_request_root" sequence="1"/>
+
+    </data>
+</odoo>

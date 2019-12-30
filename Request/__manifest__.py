@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
-    'name' : 'Manage Class',
+    'name' : 'Form request',
     'version' : '1.0',
     'summary': '',
     'sequence': 1,
@@ -14,7 +14,7 @@
         'base'
     ],
     'data': [
-
+        'views/form_request_view.xml',
     ],
     'author': 'Nguyen Quang Trong',
     'installable': True,
