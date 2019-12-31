@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <record id="my_group_rule" model="ir.module.category">
+        <field name="name">Nhóm quyền trong form request</field>
+        <field name="sequence" eval="1"/>
+    </record>
+
+    <record id="request_rule_manage" model="res.groups">
+        <field name="name">Quyền quản lý</field>
+        <field name="category_id" ref="my_group_rule"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="request_rule_employee" model="res.groups">
+        <field name="name">Quyền nhân viên</field>
+        <field name="category_id" ref="my_group_rule"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+</data>
+</odoo>

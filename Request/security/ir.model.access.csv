@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_form_request_manage,form_request_manage,model_form_request,request_rule_manage,1,1,1,1
+access_form_request_employee,form_request_employee,model_form_request,request_rule_employee,1,1,1,0
+
+access_product_request_manage,product_request_manage,model_product_request,request_rule_manage,1,1,1,1
+access_product_request_employee,product_request_employee,model_product_request,request_rule_employee,1,0,0,0
+
+access_system_request_manage,system_request_manage,model_system_request,request_rule_manage,1,1,1,1
+access_system_request_employee,system_request_employee,model_system_request,request_rule_employee,1,0,0,0
