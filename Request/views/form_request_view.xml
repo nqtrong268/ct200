@@ -18,16 +18,36 @@
             <field name="name">Form Request</field>
             <field name="model">form_request</field>
             <field name="arch" type="xml">
-                <form string="">
+                <form string="Change Request">
                     <sheet>
+                        <header>
+                            <button name="change_state" string="Submit" attrs="{'invisible': [('state', '!=', 'submit')]}"
+                                    type="object"/>
+                            <button name="change_state" string="Confirm" attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                                    type="object"/>
+                            <button name="change_state" string="To do" attrs="{'invisible': [('state', '!=', 'todo')]}"
+                                    type="object"/>
+                            <button name="change_state" string="Review" attrs="{'invisible': [('state', '!=', 'review')]}"
+                                    type="object"/>
+                            <button name="change_state" string="Done" attrs="{'invisible': [('state', '!=', 'done')]}"
+                                    type="object"/>
+                            <field name="state" widget="statusbar" statusbar_visible="submit,confirm,todo,test,review,done"
+                                   nolable="1" readonly="1"/>
+                        </header>
                         <group>
                             <group>
                                 <field name="seq_form_request"/>
                                 <field name="date_request"/>
                             </group>
                             <group>
+                                <field name="form_product_ids"/>
+                                <field name="form_system_ids"/>
+                            </group>
+                            <group>
                                 <field name="reason_change"/>
                                 <field name="des_change"/>
+                            </group>
+                            <group>
                                 <field name="before_change"/>
                                 <field name="after_change"/>
                             </group>
