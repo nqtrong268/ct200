@@ -7,7 +7,7 @@ class Product_request(models.Model):
 
     name_product = fields.Char(string='Product')
     name_seq = fields.Char(string='Number', required=True, copy=False, readonly=True, default=lambda sefl: ('New'))
-
+    # product_system_ids = fields.Many2one(comodel_name='system.request', string='System')
     @api.model
     def create(self, vals):
         if vals.get('name_seq', ('New')) == ('New'):

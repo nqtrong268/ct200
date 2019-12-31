@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="system_request_tree_view" model="ir.ui.view">
+            <field name="name">System</field>
+            <field name="model">system.request</field>
+            <field name="arch" type="xml">
+                <tree string="System">
+                    <field name="system_name"/>
+                    <field name="system_product_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="system_request_form_view" model="ir.ui.view">
+            <field name="name">System</field>
+            <field name="model">system.request</field>
+            <field name="arch" type="xml">
+                <form string="System">
+                    <sheet>
+                        <group>
+                            <field name="system_name"/>
+                            <field name="system_product_ids"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="system_request_action" model="ir.actions.act_window">
+            <field name="name">System Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">system.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="system_request_root" name="System" sequence="3"/>
+        <menuitem id="system_request_child" name="System" parent="system_request_root" action="system_request_action" sequence="1"/>
+    </data>
+</odoo>

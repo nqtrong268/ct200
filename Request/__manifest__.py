@@ -18,6 +18,7 @@
 
         'views/form_request_view.xml',
         'views/product_request_view.xml',
+        'views/system_request_view.xml',
     ],
     'author': 'Nguyen Quang Trong',
     'installable': True,

@@ -8,6 +8,7 @@
                 <tree string="Product">
                     <field name="name_seq"/>
                     <field name="name_product"/>
+<!--                    <field name="product_system_ids"/>-->
                 </tree>
             </field>
         </record>
