@@ -11,7 +11,8 @@
     'category': 'Accounting',
     'website': 'https://www.odoo.com/page/billing',
     'depends' : [
-        'base'
+        'base',
+        'mail',
     ],
     'data': [
         'security/security.xml',
@@ -20,7 +21,6 @@
         'data/ir_sequence_data.xml',
 
         'views/form_request_view.xml',
-        'views/product_request_view.xml',
         'views/system_request_view.xml',
     ],
     'author': 'Nguyen Quang Trong',

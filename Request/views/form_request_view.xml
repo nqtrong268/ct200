@@ -38,10 +38,11 @@
                             <group>
                                 <field name="seq_form_request"/>
                                 <field name="date_request"/>
+                                <field name="person_approve"/>
                             </group>
                             <group>
-                                <field name="form_product_ids"/>
-                                <field name="form_system_ids"/>
+                                <field name="form_system_product"/>
+                                <field name="form_system_ids" options="{'no_create_edit': True, 'no_create': True}" />
                             </group>
                             <group>
                                 <field name="reason_change"/>
@@ -53,6 +54,11 @@
                             </group>
                         </group>
                     </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                    </div>
                 </form>
             </field>
         </record>

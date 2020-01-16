@@ -5,7 +5,9 @@ class Product_request(models.Model):
     _name = 'product.request'
     _rec_name = 'name_product'
 
-    name_product = fields.Char(string='Product')
+    # name_product = fields.Char(string='Product')
+    name_product = fields.Selection(string='Product', selection=[('nvn', 'Native Việt Nam'), ('ovn', 'OVN'),
+                                                                 ('ntl', 'Native Thái Lan')])
     name_seq = fields.Char(string='Number', required=True, copy=False, readonly=True, default=lambda sefl: ('New'))
     # product_system_ids = fields.Many2one(comodel_name='system.request', string='System')
     @api.model

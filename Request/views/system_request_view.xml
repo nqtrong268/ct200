@@ -7,7 +7,8 @@
             <field name="arch" type="xml">
                 <tree string="System">
                     <field name="system_name"/>
-                    <field name="system_product_ids"/>
+                    <field name="sys_product"/>
+                    <field name="person_approve_system"/>
                 </tree>
             </field>
         </record>
@@ -20,7 +21,8 @@
                     <sheet>
                         <group>
                             <field name="system_name"/>
-                            <field name="system_product_ids"/>
+                            <field name="sys_product"/>
+                            <field name="person_approve_system"/>
                         </group>
                     </sheet>
                 </form>
