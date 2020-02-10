@@ -19,7 +19,6 @@
         'security/ir.model.access.csv',
 
         'data/ir_sequence_data.xml',
-
         'views/form_request_view.xml',
         'views/system_request_view.xml',
     ],
